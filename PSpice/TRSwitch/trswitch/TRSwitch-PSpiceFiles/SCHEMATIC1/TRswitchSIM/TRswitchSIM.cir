@@ -1,0 +1,24 @@
+** Profile: "SCHEMATIC1-TRswitchSIM"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\trswitch\TRSwitch-PSpiceFiles\SCHEMATIC1\TRswitchSIM.sim ] 
+
+** Creating circuit file "TRswitchSIM.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/analog.lib" 
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/source.slb" 
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/evalp.lib" 
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/diode.lib" 
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20us 0 
+.OPTIONS ADVCONV
+.AUTOCONVERGE ITL1=1000 ITL2=1000 ITL4=1000 RELTOL=0.05 ABSTOL=1.0E-6 VNTOL=.001 PIVTOL=1.0E-10 
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

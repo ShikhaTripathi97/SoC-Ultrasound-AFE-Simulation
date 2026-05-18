@@ -1,0 +1,121 @@
+(ExpressProject "TRSwitch"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "24.1 S005 (4301626)  [6/2/2025]-[08/06/25]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\trswitch.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (Sort User)
+    (File ".\TRSWITCH_OUTPUT\BOM.SCH.CSV"
+      (Type "Report")
+      (DisplayName ".\TRSWITCH_OUTPUT\BOM.SCH.CSV"))
+    (File ".\trswitch-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\trswitch-pspicefiles\schematic1\trswitchsim.sim"
+        (DisplayName "SCHEMATIC1-TRswitchSIM")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\trswitch-pspicefiles\schematic1\switch_gcdiode.sim"
+        (DisplayName "SCHEMATIC1-Switch_GCDiode")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\trswitch-pspicefiles\schematic1\trswitchsim.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File "C:\Cadence\OrCADX_24.1\tools\pspice\Library\analog.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Cadence\OrCADX_24.1\tools\pspice\Library\analog.lib"))
+      (File "C:\Cadence\OrCADX_24.1\tools\pspice\Library\source.slb"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Cadence\OrCADX_24.1\tools\pspice\Library\source.slb"))
+      (File "C:\Cadence\OrCADX_24.1\tools\pspice\Library\evalp.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Cadence\OrCADX_24.1\tools\pspice\Library\evalp.lib"))
+      (File "C:\Cadence\OrCADX_24.1\tools\pspice\Library\diode.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Cadence\OrCADX_24.1\tools\pspice\Library\diode.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (BAV99
+      (FullPartName "BAV99.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\EDIODE.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (PORTBOTH-L
+      (LibraryName "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (D1N4148
+      (FullPartName "D1N4148.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Cadence\OrCADX_24.1\tools\capture\library\pspice")
+  (ISPCBBASICLICENSE "false")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\trswitch\trswitch.dsn")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\trswitch\trswitch.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\trswitch\trswitch.dsn"
+         "SCHEMATIC1" "PAGE2"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 844"))
+      (Tab 0)))
+  (MPSSessionName "shikh"))

@@ -1,0 +1,23 @@
+** Profile: "SCHEMATIC1-Switch_GCDiode"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\trswitch\trswitch-PSpiceFiles\SCHEMATIC1\Switch_GCDiode.sim ] 
+
+** Creating circuit file "Switch_GCDiode.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/analog.lib" 
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/source.slb" 
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/evalp.lib" 
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/diode.lib" 
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

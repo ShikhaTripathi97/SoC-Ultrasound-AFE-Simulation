@@ -1,0 +1,5 @@
+ lib=C:\Users\shikh\Downloads\AD8331lna.cir, offset=1335, size=2015
+ lib=C:\Users\shikh\Downloads\AD8331vga.cir, offset=1339, size=2425
+ lib=C:\Users\shikh\Downloads\ADA4870.cir, offset=0, size=5585
+ lib=C:\Cadence\OrCADX_24.1\tools\PSpice\Library\diode.lib, offset=19555, size=328
+ lib=C:\Users\shikh\Desktop\TX810_PSPICE_AIO\TX810.lib, offset=59916, size=323

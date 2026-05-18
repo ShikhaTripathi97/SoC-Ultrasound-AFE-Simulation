@@ -1,0 +1,113 @@
+(ExpressProject "tx810only"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "24.1 S005 (4301626)  [6/2/2025]-[08/05/25]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\tx810only.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\tx810only-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (Sort User)
+    (File ".\TX810ONLY_OUTPUT\BOM.SCH.CSV"
+      (Type "Report")
+      (DisplayName ".\TX810ONLY_OUTPUT\BOM.SCH.CSV")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tx810only-pspicefiles\schematic1\switchsimonly.sim"
+        (DisplayName "SCHEMATIC1-SwitchSimOnly")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tx810only-pspicefiles\schematic1\rxside.sim"
+        (DisplayName "SCHEMATIC1-RXside")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tx810only-pspicefiles\schematic1\txswitchtest.sim"
+        (DisplayName "SCHEMATIC1-txswitchtest")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tx810only-pspicefiles\schematic1\vswitchsim.sim"
+        (DisplayName "SCHEMATIC1-vswitchsim")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\tx810only-pspicefiles\schematic1\switchsimonly.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File "C:\Users\shikh\Downloads\AD8331lna.cir"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Users\shikh\Downloads\AD8331lna.cir"))
+      (File "C:\Users\shikh\Downloads\AD8331vga.cir"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Users\shikh\Downloads\AD8331vga.cir"))
+      (File "C:\Users\shikh\Downloads\ADA4870.cir"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Users\shikh\Downloads\ADA4870.cir"))
+      (File "C:\Users\shikh\Desktop\TX810_PSPICE_AIO\TX810.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Users\shikh\Desktop\TX810_PSPICE_AIO\TX810.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VSWITCH1
+      (FullPartName "VSWITCH1.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\TX810_PSPICE_AIO\TX810.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\tx810only\tx810only.dsn")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\tx810only\tx810only.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\tx810only\tx810only.dsn"
+         "Design Cache")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\tx810only\tx810only.dsn"
+         "SCHEMATIC1" "TXSWITCH"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 251 0 844"))
+      (Tab 0)))
+  (MPSSessionName "shikh")
+  (LastUsedLibraryBrowseDirectory
+     "C:\Cadence\OrCADX_24.1\tools\capture\library\pspice"))

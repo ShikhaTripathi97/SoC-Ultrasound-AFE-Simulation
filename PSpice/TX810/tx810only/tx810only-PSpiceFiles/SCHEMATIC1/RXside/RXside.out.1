@@ -1,0 +1,104 @@
+
+**** 08/01/25 09:38:23 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-RXside"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\tx810only\tx810only-PSpiceFil
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "RXside.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/shikh/Downloads/AD8331lna.cir" 
+.LIB "C:/Users/shikh/Downloads/AD8331vga.cir" 
+.LIB "C:/Users/shikh/Downloads/ADA4870.cir" 
+.LIB "C:/Users/shikh/Desktop/TX810_PSPICE_AIO/TX810.lib" 
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TX810ONLY
+.EXTERNAL OUTPUT VD
+.EXTERNAL OUTPUT VEE
+.EXTERNAL OUTPUT VP
+V_V7         N13713 0  AC 1
++SIN 0 5V 5Meg 0 0 0
+R_R3         N13783 N13789  10 TC=0,0 
+X_U3         N13713 0 VD VEE N13783 VD ADA4870 
+V_V8         VP 0 1Vdc
+V_V1         VD 0 10Vdc
+V_V2         VEE 0 -10Vdc
+R_R1         N15478 0  1k TC=0,0 
+V_VN         N15656 0 -5Vdc
+D_D1         N15424 N15478 D1N4148 
+V_VP         N15398 0 5Vdc
+R_R2         N15656 N15542  1k TC=0,0 
+D_D4         N15478 N15542 D1N4148 
+D_D2         N15424 N13789 D1N4148 
+R_R5         N15424 N15398  1k TC=0,0 
+D_D3         N13789 N15542 D1N4148 
+D_D5         0 N15478 D1N4148 
+D_D6         N15478 0 D1N4148 
+V_VN1         N18246 0 -5Vdc
+R_R7         N18020 N19127  1k TC=0,0 
+V_VP1         N17940 0 5Vdc
+D_D11         N18100 N18104 D1N4148 
+R_R8         N18246 N18104  1k TC=0,0 
+D_D8         N17966 N18100 D1N4148 
+D_D7         N17966 N18020 D1N4148 
+D_D12         0 N18020 D1N4148 
+R_R6         N17966 N17940  1k TC=0,0 
+D_D10         N18020 0 D1N4148 
+D_D9         N18020 N18104 D1N4148 
+V_V5         N19513 0 5Vdc
+X_U1         N19373 N19127 N19441 N19175 N19351 0 0 N19441 LNA 
+X_U2         N192350 N19211 0 N19457 N19211 N19507 VP VP N19431 N19467 0 N19513
++  VGA 
+C_C9         0 N19211  0.1u  TC=0,0 
+C_C7         N191450 N19127  0.1u  TC=0,0 
+V_V6         N19441 0 5Vdc
+C_C8         0 N19127  22p  TC=0,0 
+C_C2         N19211 N19175  0.1u  TC=0,0 
+C_C1         0 N19373  0.1u  TC=0,0 
+R_RIZ         N19175 N191450  280 TC=0,0 
+R_R9         0 N19467  10k TC=0,0 
+C_C6         0 N19441  0.1u  TC=0,0 
+R_R10         0 N19431  10k TC=0,0 
+V_V3         N19457 0 1Vdc
+C_C5         N192350 N19351  0.1u  TC=0,0 
+C_C3         0 N19507  0.1u  TC=0,0 
+V_Vsin1         N18100 0  AC 0
++SIN 0 1V 5meg 0 0 0
+V_V9         VP 0 5Vdc
+X_SW1    N21034 0 N21059 0 SCHEMATIC1_SW1 
+R_R11         N21059 0  1k TC=0,0 
+V_V12         N21034 0 5Vdc
+V_V13         0 0 -5Vdc
+
+.subckt SCHEMATIC1_SW1 1 2 3 4  
+S_SW1         3 4 1 2 VSWITCH1
+RS_SW1         1 2 1G
+.ends SCHEMATIC1_SW1
+
+**** RESUMING RXside.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V9. You may break the loop by adding a series resistance
+

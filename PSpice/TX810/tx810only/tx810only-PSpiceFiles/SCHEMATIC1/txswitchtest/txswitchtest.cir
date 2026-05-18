@@ -1,0 +1,23 @@
+** Profile: "SCHEMATIC1-txswitchtest"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\tx810only\tx810only-PSpiceFiles\SCHEMATIC1\txswitchtest.sim ] 
+
+** Creating circuit file "txswitchtest.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/shikh/Downloads/AD8331lna.cir" 
+.LIB "C:/Users/shikh/Downloads/AD8331vga.cir" 
+.LIB "C:/Users/shikh/Downloads/ADA4870.cir" 
+.LIB "C:/Users/shikh/Desktop/TX810_PSPICE_AIO/TX810.lib" 
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

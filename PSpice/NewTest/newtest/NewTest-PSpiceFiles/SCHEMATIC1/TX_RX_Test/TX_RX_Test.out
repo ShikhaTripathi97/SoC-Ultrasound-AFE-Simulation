@@ -1,0 +1,471 @@
+
+**** 07/31/25 19:05:47 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TX_RX_Test"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\newtest\newtest-PSpiceFil
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "TX_RX_Test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/OrCADX_24.1/tools/capture/library/pspice/TX810_PSPICE_AIO/TX810.lib" 
+.LIB "C:/Users/shikh/Downloads/AD8331lna.cir" 
+.LIB "C:/Users/shikh/Downloads/AD8331vga.cir" 
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/ADA4870.cir" 
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20us 0 10ns 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NEWTEST
+.EXTERNAL OUTPUT VD
+.EXTERNAL OUTPUT VEE
+.EXTERNAL OUTPUT VP
+X_U1         N01118 N01089 N02302 N04237 N01077 0 0 N02302 LNA 
+X_U2         N001680 N01067 0 N01828 N01067 N01904 VP VP N03300 N03279 0 N03094
++  VGA 
+V_V1         VD 0 10Vdc
+X_U3         N08985 0 VD VEE N01178 VD ADA4870 
+C_C1         0 N01118  0.1u  TC=0,0 
+V_V2         VEE 0 -10Vdc
+C_C2         N01067 N04237  0.1u  TC=0,0 
+V_V3         N01828 0 1Vdc
+C_C3         0 N01904  0.1u  TC=0,0 
+V_V5         N03094 0 5Vdc
+R_R1         0 N03300  10k TC=0,0 
+R_R2         0 N03279  10k TC=0,0 
+C_C5         N001680 N01077  0.1u  TC=0,0 
+V_V6         N02302 0 5Vdc
+C_C6         0 N02302  0.1u  TC=0,0 
+C_C7         N046980 N01089  0.1u  TC=0,0 
+R_RIZ         N04237 N046980  280 TC=0,0 
+C_C8         0 N01089  22p  TC=0,0 
+R_R3         N01178 N08316  10 TC=0,0 
+C_C9         0 N01067  0.1u  TC=0,0 
+V_V7         N08985 0  AC 1
++SIN 0 1V 1Meg 0 0 0
+X_SW1    N08316 0 N01089 0 SCHEMATIC1_SW1 
+V_V8         VP 0 5Vdc
+
+.subckt SCHEMATIC1_SW1 1 2 3 4  
+S_SW1         3 4 1 2 VSWITCH1
+RS_SW1         1 2 1G
+.ends SCHEMATIC1_SW1
+
+**** RESUMING TX_RX_Test.cir ****
+.END
+
+**** 07/31/25 19:05:47 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TX_RX_Test"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\newtest\newtest-PSpiceFil
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1._DDEF      X_U1._DLIM      X_U2._DDEF      X_U2._DLIM      
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+           N                     .2                              .2          
+          EG                     .222                            .222        
+
+
+               X_U2._DLIM2     X_U3.diode      X_U3.DzVoutP    X_U3.DzVoutN    
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+           N  200.000000E-06                                                 
+          BV                  100               1.57            1.57         
+          EG     .222                                                        
+
+
+               X_U3.DzSlewP    X_U3.DzSlewN    X_U3.DVnoisy    X_U3.DINnoisy   
+          IS   10.000000E-15   10.000000E-15  167.000000E-18   84.226500E-15 
+          BV    2.312           2.312                                        
+          KF                                   38.300000E-18   15.291400E-18 
+
+
+               X_U3.DIPnoisy   
+          IS  667.334000E-18 
+          KF  267.830000E-18 
+
+
+**** 07/31/25 19:05:47 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TX_RX_Test"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\newtest\newtest-PSpiceFil
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1._NPNIN     
+               NPN             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF    5.000000E+03 
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF   25.000000E-15 
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 07/31/25 19:05:47 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TX_RX_Test"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\newtest\newtest-PSpiceFil
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.Rideal     
+  T_Measured   27            
+   T_Current -273            
+           R    1            
+
+
+**** 07/31/25 19:05:47 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TX_RX_Test"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\newtest\newtest-PSpiceFil
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.Switch     
+         RON    1.000000E-03 
+        ROFF    1.000000E+06 
+         VON     .01         
+        VOFF    5.000000E-03 
+
+
+**** 07/31/25 19:05:47 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TX_RX_Test"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\newtest\newtest-PSpiceFil
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VD)   10.0000  (   VP)    5.0000  (  VEE)  -10.0000  (N01067)    2.5000     
+
+(N01077)    1.2316 (N01089) 5.416E-06 (N01118)    3.2496 (N01178)    8.1791     
+
+(N01828)    1.0000 (N01904)    2.5000 (N02302)    5.0000 (N03094)    5.0000     
+
+(N03279)    2.4997 (N03300)    2.4997 (N04237)    3.7684 (N08316)    8.1791     
+
+(N08985)    0.0000 (X_U1.1)    4.9000 (X_U1.2)    -.7563 (X_U1.3)    -.7563     
+
+(X_U1.4)  -15.0540 (X_U1.5)   20.0400 (X_U1.6)    4.9000 (X_U1.7)    2.4931     
+
+(X_U1.8)    4.9000 (X_U1.9)    2.5033 (X_U3.1) 10.00E-09 (X_U3.2)     .0010     
+
+(X_U3.3)     .0010 (X_U3.4)     .0107 (X_U3.5)     .0010 (X_U3.6) 999.5E-06     
+
+(X_U3.7) 65.95E-09 (X_U3.8) 999.5E-06 (X_U3.9) 999.5E-06 (N001680)    2.5000    
+
+(N046980)    3.7684                   (X_U1.10)    3.2500                       
+
+(X_U1.11)  -16.3600                   (X_U1.12)     .6115                       
+
+(X_U1.13)     .6300                   (X_U1.14)-3.040E-06                       
+
+(X_U1.15)    -.6300                   (X_U1.16)    -.6115                       
+
+(X_U1.17)   16.3600                   (X_U1.18)  -16.3600                       
+
+(X_U1.19)     .6115                   (X_U1.20)     .6300                       
+
+(X_U1.21) 3.039E-06                   (X_U1.22)    -.6300                       
+
+(X_U1.23)    -.6115                   (X_U1.24)   16.3600                       
+
+(X_U1.25)    3.7687                   (X_U1.26)    1.3400                       
+
+(X_U1.27)    3.6600                   (X_U1.28)    3.7684                       
+
+(X_U1.29)    3.7684                   (X_U1.30)    1.2313                       
+
+(X_U1.31)    1.3400                   (X_U1.32)    3.6600                       
+
+(X_U1.33)    1.2316                   (X_U1.34)    1.2316                       
+
+(X_U1.74)    1.0000                   (X_U1.76)    -.7563                       
+
+(X_U1.77)    2.4931                   (X_U1.78)     .0010                       
+
+(X_U1.79)    4.8700                   (X_U1.80) 679.9E-06                       
+
+(X_U1.81)    3.2700                   (X_U2.35)    1.0000                       
+
+(X_U2.36)     .0040                   (X_U2.37)    1.0000                       
+
+(X_U2.38)     .9000                   (X_U2.39)    0.0000                       
+
+(X_U2.40)   -5.0000                   (X_U2.41)    5.0000                       
+
+(X_U2.42)    0.0000                   (X_U2.43)    0.0000                       
+
+(X_U2.44)    0.0000                   (X_U2.45)   -2.0100                       
+
+(X_U2.46)    2.0100                   (X_U2.47)    0.0000                       
+
+(X_U2.48)    1.0000                   (X_U2.49)   -4.3600                       
+
+(X_U2.50)     .5964                   (X_U2.51)     .6300                       
+
+(X_U2.52)    -.0306                   (X_U2.53)    -.6300                       
+
+(X_U2.54)    -.6216                   (X_U2.55)    4.3600                       
+
+(X_U2.56)   -4.3600                   (X_U2.57)     .5964                       
+
+(X_U2.58)     .6300                   (X_U2.59)    -.0306                       
+
+(X_U2.60)    -.6300                   (X_U2.61)    -.6216                       
+
+(X_U2.62)    4.3600                   (X_U2.63)    1.3572                       
+
+(X_U2.64)    2.5000                   (X_U2.65)    3.6428                       
+
+(X_U2.66)    2.5000                   (X_U2.67)    2.5000                       
+
+(X_U2.68)    2.5000                   (X_U2.69)    1.3572                       
+
+(X_U2.70)    3.6428                   (X_U2.71)    2.5000                       
+
+(X_U2.72)    2.5000                   (X_U2.73)    2.4656                       
+
+(X_U2.75)    1.0000                   (X_U3.10)     .0010                       
+
+(X_U3.13)    7.3500                   (X_U3.14)   -7.3500                       
+
+(X_U3.20) 500.0E-06                   (X_U3.21)-500.0E-06                       
+
+(X_U3.22)-500.0E-06                   (X_U3.23) 500.0E-06                       
+
+(X_U3.24)-475.0E-09                   (X_U3.25)-475.0E-09                       
+
+(X_U3.30) 19.16E-21                   (X_U3.31)     .6500                       
+
+(X_U3.32) 19.16E-21                   (X_U3.33)     .6500                       
+
+(X_U3.40)   -8.9000                   (X_U3.41)     .2100                       
+
+(X_U3.42)     .2100                   (X_U3.43)    -.8400                       
+
+(X_U3.60)    8.1791                   (X_U3.61)    6.2986                       
+
+(X_U3.62)    7.9925                   (X_U3.63)    5.7500                       
+
+(X_U3.64)   -5.7500                   (X_U3.65)   10.4000                       
+
+(X_U3.66)  -10.4000                   (X_U3.70)    8.1791                       
+
+(X_U3.71)    9.4791                   (X_U3.72)    6.8791                       
+
+(X_U3.80)    9.6277                   (X_U3.90)   -9.6913                       
+
+(X_U3.98)  -10.0000                   (X_U3.99) 19.16E-21                       
+
+(X_U1.CM1)    2.5000                  (X_U3.107) 19.16E-21                      
+
+(X_U3.110)   10.0000                  (X_U3.111)  -10.0000                      
+
+(X_U3.112)   -9.1100                  (X_U3.200)    -.0200                      
+
+(X_U3.201)    -.0105                  (X_U3.210)    8.1791                      
+
+(X_U3.220)   -8.1791                  (X_U3.230)    8.1791                      
+
+(X_U3.240)   -8.1791                  (X_U3.250)    8.1791                      
+
+(X_U3.260)   -8.1791                  (X_U3.270)    8.1791                      
+
+(X_U3.280)   -8.1791                  (X_U3.290)    8.1791                      
+
+(X_U3.295)   -8.1791                  (X_U3.296)   -8.1791                      
+
+(X_U3.297)   -8.1791                  (X_U3.300)    8.1791                      
+
+(X_U3.310)    8.1791                  (X_U3.311)    8.1791                      
+
+(X_U3.312)    8.1791                  (X_U3.313)    8.1791                      
+
+(X_U3.314)    8.1791                  (X_U3.315)    8.1791                      
+
+(X_U3.400) 19.16E-21                  (X_U3.401)     .6500                      
+
+(X_U3.402) 19.16E-21                  (X_U3.403)     .6500                      
+
+(X_U3.500) 19.16E-21                  (X_U3.501)     .6500                      
+
+(X_U3.502) 19.16E-21                  (X_U3.503)     .6500                      
+
+(X_U1.ENL1)    1.0000                 (X_U1.LON1)   17.1160                     
+
+(X_U1.LOP1)  -12.1290                 (X_U1.PSL1)    5.0000                     
+
+(X_U2.ENV1)    1.0000                 (X_U2.MID1)    2.5000                     
+
+(X_U2.VGA1)    0.0000                 (X_U1.COML1)    0.0000                    
+
+(X_U2.CLMP1)    4.5712                (X_U2.CLMP2)    4.9312                    
+
+(X_U2.GAIN1)    1.0000                (X_U2.GAIN2)     .9982                    
+
+(X_U2.HILO1)    5.9566                (X_U2.HILO2)    1.0000                    
+
+(X_U2.POST1)    0.0000                
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.813E-02
+    V_V2         2.800E-02
+    V_V3        -1.000E-07
+    V_V5        -7.143E-05
+    V_V6        -1.123E-02
+    V_V7         1.000E-05
+    V_V8        -1.454E-02
+    X_U1.V1      0.000E+00
+    X_U1.VSNSP   9.999E-08
+    X_U1.VSRP   -4.879E-12
+    X_U1.VSRN   -3.279E-12
+    X_U1.VSNSN   6.799E-08
+    X_U1.VSNS1   2.537E-08
+    X_U1.VLN1   -1.852E-04
+    X_U1.VLP1   -1.852E-04
+    X_U1.V4     -1.637E-11
+    X_U1.V3     -1.637E-11
+    X_U1.V7      2.439E-12
+    X_U1.V8     -1.335E-05
+    X_U1.V2     -5.417E-04
+    X_U1.VSNS2  -2.537E-08
+    X_U1.VLN2   -1.852E-04
+    X_U1.VLP2   -1.852E-04
+    X_U1.V6     -1.637E-11
+    X_U1.V5     -1.637E-11
+    X_U1.V9     -1.336E-05
+    X_U1.V10     2.439E-12
+    X_U2.VSNS4   2.525E-04
+    X_U2.VLN4   -8.398E-05
+    X_U2.VLP4   -3.365E-04
+    X_U2.V14    -4.401E-12
+    X_U2.V13    -4.339E-12
+    X_U2.VSNS3   2.525E-04
+    X_U2.VLN3   -8.398E-05
+    X_U2.VLP3   -3.365E-04
+    X_U2.V12    -4.401E-12
+    X_U2.V11    -4.339E-12
+    X_U2.V15    -5.010E-12
+    X_U2.V16    -5.010E-12
+    X_U2.VSR1    0.000E+00
+    X_U2.V19    -2.020E-12
+    X_U2.V20    -2.020E-12
+    X_U2.V17     1.004E-12
+    X_U2.V18     1.767E-06
+    X_U3.VOS    -1.000E-05
+    X_U3.VinP   -7.359E-12
+    X_U3.VinN    7.361E-12
+    X_U3.Vmeas1   1.371E-05
+    X_U3.Vvn1   -1.371E-05
+    X_U3.Vmeas2   1.371E-05
+    X_U3.Vvn2   -1.371E-05
+    X_U3.Vmeas3   6.915E-03
+    X_U3.VIN1   -6.915E-03
+    X_U3.Vmeas4   6.915E-03
+    X_U3.VIN2   -6.915E-03
+    X_U3.Vmeas5   5.479E-05
+    X_U3.VIP1   -5.479E-05
+    X_U3.Vmeas6   5.479E-05
+    X_U3.VIP2   -5.479E-05
+    X_U3.VPD1   -9.555E-11
+    X_U3.VPD3   -1.301E-04
+    X_U3.VPD2   -2.100E-04
+    X_U3.Vmeas7   7.995E-05
+    X_U3.VoutP  -1.631E-05
+    X_U3.VoutN   1.375E-11
+    X_U3.VIoutP  -1.310E-12
+    X_U3.VIoutN  -1.310E-12
+    X_U3.Vmeas8   8.188E-09
+    X_U3.Vmeas9   8.187E-09
+
+    TOTAL POWER DISSIPATION   7.00E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 07/31/25 19:05:47 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TX_RX_Test"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\newtest\newtest-PSpiceFil
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.25
+

@@ -1,0 +1,23 @@
+** Profile: "SCHEMATIC1-TX_RX_Test"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\newtest\newtest-PSpiceFiles\SCHEMATIC1\TX_RX_Test.sim ] 
+
+** Creating circuit file "TX_RX_Test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/OrCADX_24.1/tools/capture/library/pspice/TX810_PSPICE_AIO/TX810.lib" 
+.LIB "C:/Users/shikh/Downloads/AD8331lna.cir" 
+.LIB "C:/Users/shikh/Downloads/AD8331vga.cir" 
+.LIB "C:/Cadence/OrCADX_24.1/tools/pspice/Library/ADA4870.cir" 
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20us 0 10ns 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

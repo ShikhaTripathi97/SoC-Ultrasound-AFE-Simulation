@@ -1,0 +1,7 @@
+STATUS: PSpice Model Import Wizard for "Capture" (24.1.0.d001)
+STATUS:  
+   INFO: OLB driven flow
+   INFO: Input File: C:\USERS\SHIKH\APPDATA\ROAMING\SPB_DATA\CDSSETUP\WORKSPACE\PROJECTS\NEWTEST\NEWTEST00.olb
+   INFO: Symbol Name: ADA4870_0
+  ERROR: Symbol "ADA4870_0" not found in symbol library "C:\USERS\SHIKH\APPDATA\ROAMING\SPB_DATA\CDSSETUP\WORKSPACE\PROJECTS\NEWTEST\NEWTEST00.olb".
+STATUS: 1 Error messages, 0 Warning messages

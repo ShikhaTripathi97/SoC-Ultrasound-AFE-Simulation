@@ -1,0 +1,67 @@
+(ExpressProject "ReceiverTest"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "24.1 S005 (4301626)  [6/2/2025]-[08/07/25]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (Allegro Netlist Directory "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\receivertest.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "TRUE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (Sort User)
+    (File ".\RECEIVERTEST_OUTPUT\BOM.SCH.CSV"
+      (Type "Report")
+      (DisplayName ".\RECEIVERTEST_OUTPUT\BOM.SCH.CSV"))
+    (File ".\receivertest-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile
+         ".\receivertest-pspicefiles\schematic1\testingreceiver.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\receivertest-pspicefiles\schematic1\testingreceiver.sim"
+        (DisplayName "SCHEMATIC1-TestingReceiver")
+        (Type "PSpice Profile")))
+    (Folder "Stimulus Files")
+    (Folder "Include Files")
+    (Folder "Model Libraries"
+      (File "C:\Users\shikh\Downloads\AD8331vga.cir"
+        (DisplayName "C:\Users\shikh\Downloads\AD8331vga.cir")
+        (Type "PSpiceLibrary"))
+      (File "C:\Users\shikh\Downloads\AD8331lna.cir"
+        (DisplayName "C:\Users\shikh\Downloads\AD8331lna.cir")
+        (Type "PSpiceLibrary"))
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs")
+      (Select "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 329"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 848 24 347")
+        (Scroll "0 0")
+        (Zoom "113")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\SHIKH\APPDATA\ROAMING\SPB_DATA\CDSSETUP\WORKSPACE\PROJECTS\RECEIVERTEST\RECEIVERTEST.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "shikh"))

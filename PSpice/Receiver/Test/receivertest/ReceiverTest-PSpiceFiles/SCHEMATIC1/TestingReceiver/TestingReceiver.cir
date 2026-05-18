@@ -1,0 +1,22 @@
+** Profile: "SCHEMATIC1-TestingReceiver"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\receivertest\ReceiverTest-PSpiceFiles\SCHEMATIC1\TestingReceiver.sim ] 
+
+** Creating circuit file "TestingReceiver.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/shikh/Downloads/AD8331vga.cir" 
+.LIB "C:/Users/shikh/Downloads/AD8331lna.cir" 
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.STEP LIN PARAM VGAIN 0 1 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

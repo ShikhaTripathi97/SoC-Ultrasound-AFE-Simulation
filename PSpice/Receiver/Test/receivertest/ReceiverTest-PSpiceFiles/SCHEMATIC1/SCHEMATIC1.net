@@ -1,0 +1,24 @@
+* source RECEIVERTEST
+.EXTERNAL OUTPUT VP
+R_R9         0 N33558  10k TC=0,0 
+V_V6         N33532 0 5Vdc
+C_C7         N330960 N33078  0.1u  TC=0,0 
+R_R10         0 N33522  10k TC=0,0 
+X_U2         N332420 N33192 0 N33548 N33580 N33642 0 VP N33522 N33558 0 N33648
++  VGA 
+X_U1         N33424 N33078 N33532 N33136 N33358 0 0 N33532 LNA 
+C_C6         0 N33532  0.1u  TC=0,0 
+V_V3         N33548 0 {VGAIN}
+C_C9         0 N33580  0.1u  TC=0,0 
+V_V5         N33648 0 5Vdc
+C_C3         0 N33642  0.1u  TC=0,0 
+C_C2         N33192 N33136  0.1u  TC=0,0 
+C_C1         0 N33424  0.1u  TC=0,0 
+R_RIZ         N33136 N330960  280 TC=0,0 
+C_C8         0 N33078  22p  TC=0,0 
+C_C5         N332420 N33358  0.1u  TC=0,0 
+V_V9         VP 0 5Vdc
+C_C10         N33078 N35668  0.1u  TC=0,0 
+V_Vsin1         N35668 0  AC 1
++SIN 0 0.21V 5meg 0 0 0
+.PARAM  vgain=0.5

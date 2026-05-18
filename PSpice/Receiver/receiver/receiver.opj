@@ -1,0 +1,98 @@
+(ExpressProject "receiver"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "24.1 S005 (4301626)  [6/2/2025]-[08/07/25]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\receiver.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (Sort User)
+    (File ".\RECEIVER_OUTPUT\BOM.SCH.CSV"
+      (Type "Report")
+      (DisplayName ".\RECEIVER_OUTPUT\BOM.SCH.CSV"))
+    (File ".\receiver-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\receiver-pspicefiles\schematic1\receiverend.sim"
+        (DisplayName "SCHEMATIC1-receiverend")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\receiver-pspicefiles\schematic1\rectest.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\receiver-pspicefiles\schematic1\rectest.sim"
+        (DisplayName "SCHEMATIC1-rectest")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File "C:\Users\shikh\Downloads\AD8331lna.cir"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Users\shikh\Downloads\AD8331lna.cir"))
+      (File "C:\Users\shikh\Downloads\AD8331vga.cir"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Users\shikh\Downloads\AD8331vga.cir")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\receiver\receiver.dsn")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\receiver\receiver.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\receiver\receiver.dsn"
+         "SCHEMATIC1" "receiver"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 251 0 844"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1366 24 885")
+        (Scroll "-116 -7")
+        (Zoom "113")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\SHIKH\APPDATA\ROAMING\SPB_DATA\CDSSETUP\WORKSPACE\PROJECTS\RECEIVER\RECEIVER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1366 24 885")
+        (Scroll "0 292")
+        (Zoom "157")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\SHIKH\APPDATA\ROAMING\SPB_DATA\CDSSETUP\WORKSPACE\PROJECTS\RECEIVER\RECEIVER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "receiver")))
+  (MPSSessionName "shikh"))

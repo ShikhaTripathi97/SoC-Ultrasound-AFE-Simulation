@@ -1,0 +1,90 @@
+
+**** 08/07/25 21:40:48 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-receiverend"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\receiver\receiver-pspice
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "receiverend.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/shikh/Downloads/AD8331lna.cir" 
+.LIB "C:/Users/shikh/Downloads/AD8331vga.cir" 
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source RECEIVER
+.EXTERNAL OUTPUT VP
+.EXTERNAL OUTPUT Ven
+C_C2         N21544 N21488  0.1u  TC=0,0 
+D_D8         N21732 N22036 D1N4148 
+C_C8         0 N21430  22p  TC=0,0 
+C_C3         0 N21994  0.1u  TC=0,0 
+R_RIZ         N21488 N214480  280 TC=0,0 
+C_C1         0 N21778  0.1u  TC=0,0 
+R_R8         N22412 N22040  1k TC=0,0 
+C_C6         0 N21884  0.1u  TC=0,0 
+C_C9         0 N21544  0.1u  TC=0,0 
+C_C7         N214480 N21430  0.1u  TC=0,0 
+R_R10         0 N21874  10k TC=0,0 
+V_Vsin1         N22036 0  AC 0
++SIN 0 1V 5meg 0 0 0
+X_U2         N215940 N21544 0 N21900 N21544 N21994 VP VP N21874 N21910 0 N22000
++  VGA 
+R_R7         N21816 N21430  1k TC=0,0 
+V_VP1         N21560 0 5Vdc
+D_D10         N21816 0 D1N4148 
+D_D9         N21816 N22040 D1N4148 
+V_V6         N21884 0 5Vdc
+D_D7         N21732 N21816 D1N4148 
+D_D12         0 N21816 D1N4148 
+R_R6         N21732 N21560  1k TC=0,0 
+V_VN1         N22412 0 -5Vdc
+X_U1         N21778 N21430 N21884 N21488 N21710 0 0 N21884 LNA 
+D_D11         N22036 N22040 D1N4148 
+V_V3         N21900 0 1Vdc
+V_V9         VP 0 5Vdc
+V_V5         N22000 0 5Vdc
+C_C5         N215940 N21710  0.1u  TC=0,0 
+R_R9         0 N21910  10k TC=0,0 
+X_U4         N24373 N24407 VP N24179 N24329 0 0 VEN LNA 
+C_C13         0 N24373  0.1u  TC=0,0 
+R_R13         0 N24435  10k TC=0,0 
+C_C11         N242130 N24329  0.1u  TC=0,0 
+V_V12         N24517 0 5Vdc
+X_U3         N242130 N24189 0 N24461 N24189 N24511 VP VP N24435 N24471 0 N24517
++  VGA 
+R_R12         0 N24471  10k TC=0,0 
+C_C15         0 N24511  0.1u  TC=0,0 
+V_V11         N24461 0 1Vdc
+C_C12         0 N24189  0.1u  TC=0,0 
+C_C10         N24189 N24179  0.1u  TC=0,0 
+V_V13         VP 0 5Vdc
+V_V14         VEN 0 2Vdc
+V_Vsin2         N24407 0  AC 0
++SIN 1.5 10mV 5meg 0 0 0
+
+**** RESUMING receiverend.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V13. You may break the loop by adding a series resistance
+

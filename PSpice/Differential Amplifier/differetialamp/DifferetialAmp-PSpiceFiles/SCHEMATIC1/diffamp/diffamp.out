@@ -1,0 +1,176 @@
+
+**** 07/17/25 14:29:16 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-diffamp"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\differetialamp\DifferetialAm
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "diffamp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\shikh\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIFFERETIALAMP
+.EXTERNAL OUTPUT VCC
+.EXTERNAL OUTPUT VEE
+V_V1         VCC 0 12Vdc
+V_V2         VEE 0 -12Vdc
+R_R1         N00654 N00646  1k TC=0,0 
+R_R2         N00665 N00650  1k TC=0,0 
+R_R3         N00646 N00685  5K TC=0,0 
+R_R4         0 N00650  5K TC=0,0 
+R_R5         0 N00685  5K TC=0,0 
+V_Vb         N00665 0  AC 1
++SIN 0 2 100 0 0 0
+V_Va         N00654 0  AC 1
++SIN 90 2 100 0 0 0
+X_U1         N00650 N00646 VCC VEE N00685 uA741
+
+**** RESUMING diffamp.cir ****
+.END
+
+**** 07/17/25 14:29:16 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-diffamp"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\differetialamp\DifferetialAm
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 07/17/25 14:29:16 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-diffamp"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\differetialamp\DifferetialAm
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 07/17/25 14:29:16 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-diffamp"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\differetialamp\DifferetialAm
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   12.0000  (  VEE)  -12.0000  (N00646)   68.2410 (N00650) 10.60E-09     
+
+(N00654)   90.0000 (N00665)    0.0000 (N00685)   11.8220 (X_U1.6)-1045.4000     
+
+(X_U1.7)   13.8610 (X_U1.8)   13.8610 (X_U1.9)    0.0000 (X_U1.10)   67.4230    
+
+(X_U1.11)   67.4600                   (X_U1.12)   12.0000                       
+
+(X_U1.13)   67.4610                   (X_U1.14)   67.4230                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)   40.7940                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         5.885E-02
+    V_V2         1.337E-03
+    V_Vb         1.060E-11
+    V_Va        -2.176E-02
+    X_U1.vb     -1.045E-02
+    X_U1.vc     -4.971E-02
+    X_U1.ve      2.433E-11
+    X_U1.vlim    4.079E-02
+    X_U1.vlp     1.109E-02
+    X_U1.vln    -8.080E-11
+
+    TOTAL POWER DISSIPATION   8.74E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 07/17/25 14:29:16 ****** PSpice 24.1.0 (2 June 2025) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-diffamp"  [ c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\differetialamp\DifferetialAm
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .39
+

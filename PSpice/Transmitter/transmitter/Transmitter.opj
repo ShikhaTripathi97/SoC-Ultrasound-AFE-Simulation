@@ -1,0 +1,84 @@
+(ExpressProject "Transmitter"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "24.1 S005 (4301626)  [6/2/2025]-[08/07/25]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (Allegro Netlist Directory "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\transmitter.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\transmitter-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (Sort User)
+    (File ".\TRANSMITTER_OUTPUT\BOM.SCH.CSV"
+      (Type "Report")
+      (DisplayName ".\TRANSMITTER_OUTPUT\BOM.SCH.CSV")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\transmitter-pspicefiles\schematic1\transmitamp_sim.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transmitter-pspicefiles\schematic1\transmitamp_sim.sim"
+        (DisplayName "SCHEMATIC1-transmitamp_sim")
+        (Type "PSpice Profile")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File "C:\Users\shikh\Downloads\ADA4870.cir"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\Users\shikh\Downloads\ADA4870.cir"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\ORCADX_24.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\transmitter\transmitter.dsn")
+      (Path "Design Resources"
+         "c:\users\shikh\appdata\roaming\spb_data\cdssetup\workspace\projects\transmitter\transmitter.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 867"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1674 24 885")
+        (Scroll "-270 -7")
+        (Zoom "113")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\SHIKH\APPDATA\ROAMING\SPB_DATA\CDSSETUP\WORKSPACE\PROJECTS\TRANSMITTER\TRANSMITTER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "shikh")
+  (LastUsedLibraryBrowseDirectory
+     "C:\Cadence\OrCADX_24.1\tools\capture\library\pspice"))
